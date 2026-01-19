@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://newis.it/distributori"
+           xmlns:tns="http://newis.it/distributori"
+           elementFormDefault="qualified">
+
+    <!-- Elemento root -->
+    <xs:element name="sistemaDistributori" type="tns:SistemaDistributoriType"/>
+
+    <!-- Tipo complesso per il sistema -->
+    <xs:complexType name="SistemaDistributoriType">
+        <xs:sequence>
+            <xs:element name="dataRilevazione" type="xs:dateTime"/>
+            <xs:element name="statisticheGenerali" type="tns:StatisticheGeneraliType"/>
+            <xs:element name="distributori" type="tns:DistributoriType"/>
+        </xs:sequence>
+        <xs:attribute name="versione" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <!-- Statistiche generali del sistema -->
+    <xs:complexType name="StatisticheGeneraliType">
+        <xs:sequence>
+            <xs:element name="totaleDistributori" type="xs:positiveInteger"/>
+            <xs:element name="distributoriAttivi" type="xs:nonNegativeInteger"/>
+            <xs:element name="distributoriConGuasti" type="xs:nonNegativeInteger"/>
+            <xs:element name="bevandeOggi" type="xs:nonNegativeInteger"/>
+            <xs:element name="addettiAttivi" type="xs:nonNegativeInteger"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Lista distributori -->
+    <xs:complexType name="DistributoriType">
+        <xs:sequence>
+            <xs:element name="distributore" type="tns:DistributoreType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Singolo distributore -->
+    <xs:complexType name="DistributoreType">
+        <xs:sequence>
+            <xs:element name="id" type="xs:ID"/>
+            <xs:element name="nome" type="xs:string"/>
+            <xs:element name="modello" type="xs:string"/>
+            <xs:element name="ubicazione" type="tns:UbicazioneType"/>
+            <xs:element name="dataInstallazione" type="xs:date"/>
+            <xs:element name="statoOperativo" type="tns:StatoOperativoType"/>
+            <xs:element name="livelliForniture" type="tns:LivelliFornitureType"/>
+            <xs:element name="componenti" type="tns:ComponentiType"/>
+            <xs:element name="guasti" type="tns:GuastiType" minOccurs="0"/>
+            <xs:element name="statistiche" type="tns:StatisticheDistributoreType"/>
+            <xs:element name="ultimoIntervento" type="tns:InterventoType" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Ubicazione -->
+    <xs:complexType name="UbicazioneType">
+        <xs:sequence>
+            <xs:element name="edificio" type="xs:string"/>
+            <xs:element name="piano" type="xs:string"/>
+            <xs:element name="area" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Stato operativo -->
+    <xs:complexType name="StatoOperativoType">
+        <xs:sequence>
+            <xs:element name="attivo" type="xs:boolean"/>
+            <xs:element name="connesso" type="xs:boolean"/>
+            <xs:element name="modalita" type="tns:ModalitaType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Modalità operative -->
+    <xs:simpleType name="ModalitaType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="normale"/>
+            <xs:enumeration value="manutenzione"/>
+            <xs:enumeration value="emergenza"/>
+            <xs:enumeration value="spento"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Livelli forniture -->
+    <xs:complexType name="LivelliFornitureType">
+        <xs:sequence>
+            <xs:element name="caffe" type="tns:LivelloType"/>
+            <xs:element name="latte" type="tns:LivelloType"/>
+            <xs:element name="zucchero" type="tns:LivelloType"/>
+            <xs:element name="bicchieri" type="tns:LivelloType"/>
+            <xs:element name="acqua" type="tns:LivelloType"/>
+            <xs:element name="cacao" type="tns:LivelloType" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Livello singolo -->
+    <xs:complexType name="LivelloType">
+        <xs:sequence>
+            <xs:element name="percentuale" type="tns:PercentualeType"/>
+            <xs:element name="quantita" type="xs:decimal"/>
+            <xs:element name="unitaMisura" type="xs:string"/>
+            <xs:element name="statoAllerta" type="tns:StatoAllertaType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Percentuale 0-100 -->
+    <xs:simpleType name="PercentualeType">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Stato allerta -->
+    <xs:simpleType name="StatoAllertaType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="normale"/>
+            <xs:enumeration value="attenzione"/>
+            <xs:enumeration value="critico"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Componenti -->
+    <xs:complexType name="ComponentiType">
+        <xs:sequence>
+            <xs:element name="componente" type="tns:ComponenteType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Singolo componente -->
+    <xs:complexType name="ComponenteType">
+        <xs:sequence>
+            <xs:element name="nome" type="xs:string"/>
+            <xs:element name="tipo" type="xs:string"/>
+            <xs:element name="funzionante" type="xs:boolean"/>
+            <xs:element name="messaggioStato" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Lista guasti -->
+    <xs:complexType name="GuastiType">
+        <xs:sequence>
+            <xs:element name="guasto" type="tns:GuastoType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Singolo guasto -->
+    <xs:complexType name="GuastoType">
+        <xs:sequence>
+            <xs:element name="id" type="xs:string"/>
+            <xs:element name="tipo" type="tns:TipoGuastoType"/>
+            <xs:element name="descrizione" type="xs:string"/>
+            <xs:element name="componente" type="xs:string"/>
+            <xs:element name="gravita" type="tns:GravitaType"/>
+            <xs:element name="dataRilevazione" type="xs:dateTime"/>
+            <xs:element name="presaInCarico" type="xs:boolean"/>
+            <xs:element name="addettoAssegnato" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Tipo guasto -->
+    <xs:simpleType name="TipoGuastoType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="meccanico"/>
+            <xs:enumeration value="elettrico"/>
+            <xs:enumeration value="idraulico"/>
+            <xs:enumeration value="elettronico"/>
+            <xs:enumeration value="software"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Gravità guasto -->
+    <xs:simpleType name="GravitaType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="bassa"/>
+            <xs:enumeration value="media"/>
+            <xs:enumeration value="alta"/>
+            <xs:enumeration value="critica"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Statistiche distributore -->
+    <xs:complexType name="StatisticheDistributoreType">
+        <xs:sequence>
+            <xs:element name="bevandeOggi" type="xs:nonNegativeInteger"/>
+            <xs:element name="bevandeMeseCorrente" type="xs:nonNegativeInteger"/>
+            <xs:element name="incassoOggi" type="xs:decimal"/>
+            <xs:element name="incassoMeseCorrente" type="xs:decimal"/>
+            <xs:element name="tempoFunzionamentoOggi" type="xs:duration"/>
+            <xs:element name="bevandePerTipo" type="tns:BevandePerTipoType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Bevande per tipo -->
+    <xs:complexType name="BevandePerTipoType">
+        <xs:sequence>
+            <xs:element name="bevanda" type="tns:BevandaStatType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Statistica singola bevanda -->
+    <xs:complexType name="BevandaStatType">
+        <xs:sequence>
+            <xs:element name="nome" type="xs:string"/>
+            <xs:element name="quantita" type="xs:nonNegativeInteger"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Intervento -->
+    <xs:complexType name="InterventoType">
+        <xs:sequence>
+            <xs:element name="data" type="xs:dateTime"/>
+            <xs:element name="tipo" type="xs:string"/>
+            <xs:element name="addetto" type="xs:string"/>
+            <xs:element name="descrizione" type="xs:string"/>
+            <xs:element name="durata" type="xs:duration"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

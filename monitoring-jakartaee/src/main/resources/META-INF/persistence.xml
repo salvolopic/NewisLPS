@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence
+             https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+
+    <persistence-unit name="MonitoringPU" transaction-type="JTA">
+        <jta-data-source>java:jboss/datasources/MonitoringDS</jta-data-source>
+
+        <properties>
+            <!-- Hibernate settings -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+
+            <!-- CREA schema automaticamente (database separato) -->
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+
+            <!-- Schema -->
+            <property name="hibernate.default_schema" value="public"/>
+        </properties>
+    </persistence-unit>
+</persistence>

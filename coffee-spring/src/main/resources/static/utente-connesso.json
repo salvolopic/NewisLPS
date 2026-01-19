@@ -1,0 +1,10 @@
+{
+  "connesso": true,
+  "utente": {
+    "nome": "Salvatore Lo Piccolo",
+    "credito": 20.00
+  },
+  "distributore": {
+    "id": "UNIPA-ED9-PT"
+  }
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestione Distributori - NewisLPS</title>
+    <link rel="stylesheet" href="/css/common-styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">
+                <div class="logo-text">NewisLPS</div>
+            </div>
+            <div class="machine-name">Gestione Distributori</div>
+            <div class="user-info">
+                <div class="user-name">Admin: Luca Verdi</div>
+            </div>
+        </div>
+
+        <!-- Menu navigazione -->
+        <div class="tabs">
+            <a href="gestore-main.html" class="tab" style="text-decoration: none;">STATO MACCHINE</a>
+            <a href="gestore-distributori.html" class="tab active" style="text-decoration: none;">DISTRIBUTORI</a>
+            <a href="gestore-addetti.html" class="tab" style="text-decoration: none;">ADDETTI</a>
+        </div>
+
+        <!-- Aggiunta nuovo distributore -->
+        <div class="action-section">
+            <div class="action-title">Aggiungi Nuovo Distributore</div>
+            
+            <form action="gestore-distributori.html" method="get">
+                <div class="form-group">
+                    <label>ID Distributore</label>
+                    <input type="text" placeholder="es. UNIPA-ED7-P2" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Nome Macchina</label>
+                    <input type="text" placeholder="es. Aula Magna" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Ubicazione</label>
+                    <input type="text" placeholder="es. Edificio 7 - Piano 2" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Modello</label>
+                    <select>
+                        <option>Maestro Standard</option>
+                        <option>Maestro Pro</option>
+                        <option>Maestro Mini</option>
+                        <option>Maestro Premium</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Capacità Caffè (grammi)</label>
+                    <input type="number" placeholder="1000" value="1000" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Capacità Latte (ml)</label>
+                    <input type="number" placeholder="2000" value="2000" required>
+                </div>
+
+                <button type="submit" class="btn">Aggiungi Distributore</button>
+            </form>
+        </div>
+
+        <!-- Lista distributori esistenti -->
+        <div class="action-section">
+            <div class="action-title">Distributori Registrati</div>
+
+            <div class="machine-list">
+                <!-- I distributori vengono caricati dinamicamente dal database via JavaScript -->
+            </div>
+        </div>
+
+        <!-- Logout -->
+        <a href="gestore-login.html" class="btn btn-secondary" style="margin-top: 20px; display: block; text-align: center; text-decoration: none;">Esci</a>
+    </div>
+
+    <script src="/js/gestore-distributori.js?v=2"></script>
+</body>
+</html>

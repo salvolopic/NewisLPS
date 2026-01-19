@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sistemaDistributori xmlns="http://newis.it/distributori"
+                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                     xsi:schemaLocation="http://newis.it/distributori distributori-schema.xsd"
+                     versione="1.0">
+
+    <dataRilevazione>2025-12-25T14:30:00Z</dataRilevazione>
+
+    <statisticheGenerali>
+        <totaleDistributori>3</totaleDistributori>
+        <distributoriAttivi>2</distributoriAttivi>
+        <distributoriConGuasti>1</distributoriConGuasti>
+        <bevandeOggi>248</bevandeOggi>
+        <addettiAttivi>5</addettiAttivi>
+    </statisticheGenerali>
+
+    <distributori>
+        <!-- Distributore 1: ATTIVO - Funzionante -->
+        <distributore>
+            <id>DIST001</id>
+            <nome>Distributore Edificio A</nome>
+            <modello>CoffeeMaster 3000</modello>
+
+            <ubicazione>
+                <edificio>Edificio A</edificio>
+                <piano>Piano 1</piano>
+                <area>Area Break</area>
+            </ubicazione>
+
+            <dataInstallazione>2024-01-15</dataInstallazione>
+
+            <statoOperativo>
+                <attivo>true</attivo>
+                <connesso>true</connesso>
+                <modalita>normale</modalita>
+            </statoOperativo>
+
+            <livelliForniture>
+                <caffe>
+                    <percentuale>75.0</percentuale>
+                    <quantita>150</quantita>
+                    <unitaMisura>unità</unitaMisura>
+                    <statoAllerta>normale</statoAllerta>
+                </caffe>
+                <latte>
+                    <percentuale>80.0</percentuale>
+                    <quantita>160</quantita>
+                    <unitaMisura>unità</unitaMisura>
+                    <statoAllerta>normale</statoAllerta>
+                </latte>
+                <zucchero>
+                    <percentuale>65.0</percentuale>
+                    <quantita>130</quantita>
+                    <unitaMisura>unità</unitaMisura>
+                    <statoAllerta>normale</statoAllerta>
+                </zucchero>
+                <bicchieri>
+                    <percentuale>90.0</percentuale>
+                    <quantita>180</quantita>
+                    <unitaMisura>unità</unitaMisura>
+                    <statoAllerta>normale</statoAllerta>
+                </bicchieri>
+                <acqua>
+                    <percentuale>85.0</percentuale>
+                    <quantita>170</quantita>
+                    <unitaMisura>unità</unitaMisura>
+                    <statoAllerta>normale</statoAllerta>
+                </acqua>
+                <cacao>
+                    <percentuale>70.0</percentuale>
+                    <quantita>140</quantita>
+                    <unitaMisura>unità</unitaMisura>
+                    <statoAllerta>normale</statoAllerta>
+                </cacao>
+            </livelliForniture>
+
+            <componenti>
+                <componente>
+                    <nome>Pompa Caffè</nome>
+                    <tipo>meccanico</tipo>
+                    <funzionante>true</funzionante>
+                </componente>
+                <componente>
+                    <nome>Caldaia</nome>
+                    <tipo>elettrico</tipo>
+                    <funzionante>true</funzionante>
+                </componente>
+                <componente>
+                    <nome>Sistema Erogazione Latte</nome>
+                    <tipo>idraulico</tipo>
+                    <funzionante>true</funzionante>
+                </componente>
+                <componente>
+                    <nome>Display Touch</nome>
+                    <tipo>elettronico</tipo>
+                    <funzionante>true</funzionante>
+                </componente>
+            </componenti>
+
+            <statistiche>
+                <bevandeOggi>87</bevandeOggi>
+                <bevandeMeseCorrente>2453</bevandeMeseCorrente>
+                <incassoOggi>123.50</incassoOggi>
+                <incassoMeseCorrente>3478.90</incassoMeseCorrente>
+                <tempoFunzionamentoOggi>PT9H15M</tempoFunzionamentoOggi>
+
+                <bevandePerTipo>
+                    <bevanda>
+                        <nome>Espresso</nome>
+                        <quantita>28</quantita>
+                    </bevanda>
+                    <bevanda>
+                        <nome>Cappuccino</nome>
+                        <quantita>35</quantita>
+                    </bevanda>
+                    <bevanda>
+                        <nome>Caffè Latte</nome>
+                        <quantita>15</quantita>
+                    </bevanda>
+                    <bevanda>
+                        <nome>Tè</nome>
+                        <quantita>9</quantita>
+                    </bevanda>
+                </bevandePerTipo>
+            </statistiche>
+
+            <ultimoIntervento>
+                <data>2025-12-20T10:30:00Z</data>
+                <tipo>Manutenzione Ordinaria</tipo>
+                <addetto>Mario Rossi</addetto>
+                <descrizione>Ripristino livelli forniture e pulizia componenti</descrizione>
+                <durata>PT45M</durata>
+            </ultimoIntervento>
+        </distributore>
+
+        <!-- Distributore 2: ATTIVO - Livelli Bassi -->
+        <distributore>
+            <id>DIST002</id>
+            <nome>Distributore Edificio B</nome>
+            <modello>CoffeeMaster 2500</modello>
+
+            <ubicazione>
+                <edificio>Edificio B</edificio>
+                <piano>Piano 2</piano>
+                <area>Corridoio Centrale</area>
+            </ubicazione>
+
+            <dataInstallazione>2024-03-10</dataInstallazione>
+
+            <statoOperativo>
+                <attivo>true</attivo>
+                <connesso>true</connesso>
+                <modalita>normale</modalita>
+            </statoOperativo>
+
+            <livelliForniture>
+                <caffe>
+                    <percentuale>18.0</percentuale>
+                    <quantita>36</quantita>
+                    <unitaMisura>unità</unitaMisura>
+                    <statoAllerta>critico</statoAllerta>
+                </caffe>
+                <latte>
+                    <percentuale>22.0</percentuale>
+                    <quantita>44</quantita>
+                    <unitaMisura>unità</unitaMisura>
+                    <statoAllerta>attenzione</statoAllerta>
+                </latte>
+                <zucchero>
+                    <percentuale>15.0</percentuale>
+                    <quantita>30</quantita>
+                    <unitaMisura>unità</unitaMisura>
+                    <statoAllerta>critico</statoAllerta>
+                </zucchero>
+                <bicchieri>
+                    <percentuale>40.0</percentuale>
+                    <quantita>80</quantita>
+                    <unitaMisura>unità</unitaMisura>
+                    <statoAllerta>normale</statoAllerta>
+                </bicchieri>
+                <acqua>
+                    <percentuale>55.0</percentuale>
+                    <quantita>110</quantita>
+                    <unitaMisura>unità</unitaMisura>
+                    <statoAllerta>normale</statoAllerta>
+                </acqua>
+                <cacao>
+                    <percentuale>25.0</percentuale>
+                    <quantita>50</quantita>
+                    <unitaMisura>unità</unitaMisura>
+                    <statoAllerta>attenzione</statoAllerta>
+                </cacao>
+            </livelliForniture>
+
+            <componenti>
+                <componente>
+                    <nome>Pompa Caffè</nome>
+                    <tipo>meccanico</tipo>
+                    <funzionante>true</funzionante>
+                </componente>
+                <componente>
+                    <nome>Caldaia</nome>
+                    <tipo>elettrico</tipo>
+                    <funzionante>true</funzionante>
+                </componente>
+                <componente>
+                    <nome>Sistema Erogazione Latte</nome>
+                    <tipo>idraulico</tipo>
+                    <funzionante>true</funzionante>
+                </componente>
+                <componente>
+                    <nome>Display Touch</nome>
+                    <tipo>elettronico</tipo>
+                    <funzionante>true</funzionante>
+                </componente>
+            </componenti>
+
+            <statistiche>
+                <bevandeOggi>112</bevandeOggi>
+                <bevandeMeseCorrente>3128</bevandeMeseCorrente>
+                <incassoOggi>165.80</incassoOggi>
+                <incassoMeseCorrente>4532.15</incassoMeseCorrente>
+                <tempoFunzionamentoOggi>PT10H30M</tempoFunzionamentoOggi>
+
+                <bevandePerTipo>
+                    <bevanda>
+                        <nome>Espresso</nome>
+                        <quantita>42</quantita>
+                    </bevanda>
+                    <bevanda>
+                        <nome>Cappuccino</nome>
+                        <quantita>48</quantita>
+                    </bevanda>
+                    <bevanda>
+                        <nome>Caffè Latte</nome>
+                        <quantita>18</quantita>
+                    </bevanda>
+                    <bevanda>
+                        <nome>Tè</nome>
+                        <quantita>4</quantita>
+                    </bevanda>
+                </bevandePerTipo>
+            </statistiche>
+
+            <ultimoIntervento>
+                <data>2025-12-18T14:00:00Z</data>
+                <tipo>Manutenzione Ordinaria</tipo>
+                <addetto>Luigi Bianchi</addetto>
+                <descrizione>Ripristino livelli forniture</descrizione>
+                <durata>PT30M</durata>
+            </ultimoIntervento>
+        </distributore>
+
+        <!-- Distributore 3: MANUTENZIONE - Con Guasto -->
+        <distributore>
+            <id>DIST003</id>
+            <nome>Distributore Edificio C</nome>
+            <modello>CoffeeMaster 3000</modello>
+
+            <ubicazione>
+                <edificio>Edificio C</edificio>
+                <piano>Piano Terra</piano>
+                <area>Hall Ingresso</area>
+            </ubicazione>
+
+            <dataInstallazione>2023-11-05</dataInstallazione>
+
+            <statoOperativo>
+                <attivo>false</attivo>
+                <connesso>true</connesso>
+                <modalita>manutenzione</modalita>
+            </statoOperativo>
+
+            <livelliForniture>
+                <caffe>
+                    <percentuale>60.0</percentuale>
+                    <quantita>120</quantita>
+                    <unitaMisura>unità</unitaMisura>
+                    <statoAllerta>normale</statoAllerta>
+                </caffe>
+                <latte>
+                    <percentuale>55.0</percentuale>
+                    <quantita>110</quantita>
+                    <unitaMisura>unità</unitaMisura>
+                    <statoAllerta>normale</statoAllerta>
+                </latte>
+                <zucchero>
+                    <percentuale>70.0</percentuale>
+                    <quantita>140</quantita>
+                    <unitaMisura>unità</unitaMisura>
+                    <statoAllerta>normale</statoAllerta>
+                </zucchero>
+                <bicchieri>
+                    <percentuale>75.0</percentuale>
+                    <quantita>150</quantita>
+                    <unitaMisura>unità</unitaMisura>
+                    <statoAllerta>normale</statoAllerta>
+                </bicchieri>
+                <acqua>
+                    <percentuale>65.0</percentuale>
+                    <quantita>130</quantita>
+                    <unitaMisura>unità</unitaMisura>
+                    <statoAllerta>normale</statoAllerta>
+                </acqua>
+                <cacao>
+                    <percentuale>50.0</percentuale>
+                    <quantita>100</quantita>
+                    <unitaMisura>unità</unitaMisura>
+                    <statoAllerta>normale</statoAllerta>
+                </cacao>
+            </livelliForniture>
+
+            <componenti>
+                <componente>
+                    <nome>Pompa Caffè</nome>
+                    <tipo>meccanico</tipo>
+                    <funzionante>true</funzionante>
+                </componente>
+                <componente>
+                    <nome>Caldaia</nome>
+                    <tipo>elettrico</tipo>
+                    <funzionante>false</funzionante>
+                    <messaggioStato>Temperatura non raggiunta - Sospetto guasto resistenza</messaggioStato>
+                </componente>
+                <componente>
+                    <nome>Sistema Erogazione Latte</nome>
+                    <tipo>idraulico</tipo>
+                    <funzionante>true</funzionante>
+                </componente>
+                <componente>
+                    <nome>Display Touch</nome>
+                    <tipo>elettronico</tipo>
+                    <funzionante>true</funzionante>
+                </componente>
+            </componenti>
+
+            <guasti>
+                <guasto>
+                    <id>G001</id>
+                    <tipo>elettrico</tipo>
+                    <descrizione>Caldaia non raggiunge temperatura operativa</descrizione>
+                    <componente>Caldaia</componente>
+                    <gravita>alta</gravita>
+                    <dataRilevazione>2025-12-25T08:15:00Z</dataRilevazione>
+                    <presaInCarico>true</presaInCarico>
+                    <addettoAssegnato>Mario Rossi</addettoAssegnato>
+                </guasto>
+            </guasti>
+
+            <statistiche>
+                <bevandeOggi>49</bevandeOggi>
+                <bevandeMeseCorrente>1876</bevandeMeseCorrente>
+                <incassoOggi>72.50</incassoOggi>
+                <incassoMeseCorrente>2714.30</incassoMeseCorrente>
+                <tempoFunzionamentoOggi>PT5H45M</tempoFunzionamentoOggi>
+
+                <bevandePerTipo>
+                    <bevanda>
+                        <nome>Espresso</nome>
+                        <quantita>18</quantita>
+                    </bevanda>
+                    <bevanda>
+                        <nome>Cappuccino</nome>
+                        <quantita>22</quantita>
+                    </bevanda>
+                    <bevanda>
+                        <nome>Caffè Latte</nome>
+                        <quantita>7</quantita>
+                    </bevanda>
+                    <bevanda>
+                        <nome>Tè</nome>
+                        <quantita>2</quantita>
+                    </bevanda>
+                </bevandePerTipo>
+            </statistiche>
+
+            <ultimoIntervento>
+                <data>2025-12-25T08:30:00Z</data>
+                <tipo>Riparazione Guasto</tipo>
+                <addetto>Mario Rossi</addetto>
+                <descrizione>Intervento in corso - Sostituzione resistenza caldaia</descrizione>
+                <durata>PT2H00M</durata>
+            </ultimoIntervento>
+        </distributore>
+    </distributori>
+
+</sistemaDistributori>

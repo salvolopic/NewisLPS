@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Cup body -->
+  <path d="M 55 85 L 45 155 Q 45 165 55 165 L 145 165 Q 155 165 155 155 L 145 85 Z"
+        fill="#D2691E" stroke="#A0522D" stroke-width="2"/>
+
+  <!-- Coffee inside cup -->
+  <ellipse cx="100" cy="85" rx="45" ry="10" fill="#6F4E37"/>
+
+  <!-- Milk foam (lighter, puffy) -->
+  <ellipse cx="100" cy="80" rx="45" ry="12" fill="#F5E6D3"/>
+  <ellipse cx="85" cy="75" rx="20" ry="10" fill="#FFFFFF" opacity="0.8"/>
+  <ellipse cx="115" cy="75" rx="20" ry="10" fill="#FFFFFF" opacity="0.8"/>
+  <ellipse cx="100" cy="72" rx="25" ry="12" fill="#FFF8E7" opacity="0.9"/>
+
+  <!-- Cocoa powder on top -->
+  <ellipse cx="90" cy="75" rx="3" ry="2" fill="#8B4513" opacity="0.6"/>
+  <ellipse cx="100" cy="73" rx="2" ry="2" fill="#8B4513" opacity="0.6"/>
+  <ellipse cx="110" cy="76" rx="3" ry="2" fill="#8B4513" opacity="0.6"/>
+  <ellipse cx="105" cy="78" rx="2" ry="2" fill="#8B4513" opacity="0.6"/>
+
+  <!-- Handle -->
+  <path d="M 155 95 Q 175 105 175 125 Q 175 145 155 155"
+        fill="none" stroke="#D2691E" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- Saucer -->
+  <ellipse cx="100" cy="170" rx="60" ry="8" fill="#D2691E" opacity="0.6"/>
+  <ellipse cx="100" cy="168" rx="60" ry="6" fill="#DEB887" opacity="0.8"/>
+
+  <!-- Steam -->
+  <path d="M 75 60 Q 70 45 75 35" fill="none" stroke="#E0E0E0" stroke-width="2" opacity="0.7" stroke-linecap="round"/>
+  <path d="M 100 55 Q 95 40 100 25" fill="none" stroke="#E0E0E0" stroke-width="2" opacity="0.6" stroke-linecap="round"/>
+  <path d="M 125 60 Q 130 45 125 35" fill="none" stroke="#E0E0E0" stroke-width="2" opacity="0.7" stroke-linecap="round"/>
+</svg>

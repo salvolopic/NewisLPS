@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewisLPS - Sistema Gestione Distributori</title>
+    <link rel="stylesheet" href="/css/common-styles.css">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .welcome-container {
+            text-align: center;
+            max-width: 800px;
+            padding: 40px;
+        }
+
+        .logo-large {
+            font-size: 72px;
+            font-weight: bold;
+            color: #00a86b;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 20px rgba(0, 168, 107, 0.3);
+        }
+
+        .tagline {
+            font-size: 24px;
+            color: #cccccc;
+            margin-bottom: 50px;
+            font-weight: 300;
+        }
+
+        .access-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .access-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 50px 35px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: #ffffff;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .access-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #00a86b 0%, #00cc7f 100%);
+            transform: scaleX(0);
+            transition: transform 0.3s;
+        }
+
+        .access-card:hover {
+            background: rgba(0, 168, 107, 0.1);
+            border-color: #00a86b;
+            transform: translateY(-5px);
+        }
+
+        .access-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .access-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+
+        .access-title {
+            font-size: 26px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #00a86b;
+        }
+
+        .access-description {
+            font-size: 15px;
+            color: #999;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .logo-large {
+                font-size: 48px;
+            }
+
+            .tagline {
+                font-size: 18px;
+            }
+
+            .access-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .welcome-container {
+                padding: 20px;
+            }
+
+            .access-card {
+                padding: 40px 25px;
+            }
+
+            .access-icon {
+                font-size: 56px;
+            }
+
+            .access-title {
+                font-size: 24px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .access-grid {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 900px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .access-card {
+                padding: 60px 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-container">
+        <div class="logo-large">NewisLPS</div>
+        <div class="tagline">Sistema di Gestione Distributori</div>
+
+        <div class="access-grid">
+            <a href="/distributore-main.html" class="access-card">
+                <div class="access-icon">🖥️</div>
+                <div class="access-title">Distributore</div>
+                <div class="access-description">Interfaccia di erogazione bevande</div>
+            </a>
+
+            <a href="/cliente-login.html" class="access-card">
+                <div class="access-icon">👤</div>
+                <div class="access-title">Cliente</div>
+                <div class="access-description">Accesso area personale</div>
+            </a>
+
+            <a href="/manutenzione-login.html" class="access-card">
+                <div class="access-icon">🔧</div>
+                <div class="access-title">Manutenzione</div>
+                <div class="access-description">Area addetti tecnici</div>
+            </a>
+
+            <a href="/gestore-login.html" class="access-card">
+                <div class="access-icon">⚙️</div>
+                <div class="access-title">Amministrazione</div>
+                <div class="access-description">Gestione sistema</div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

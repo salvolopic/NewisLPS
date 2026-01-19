@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrazione Cliente - NewisLPS</title>
+    <link rel="stylesheet" href="/css/common-styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="login-container">
+            <div class="login-header">
+                <div class="logo-text" style="color: #00a86b; font-size: 42px;">NewisLPS</div>
+                <h1>Registrazione</h1>
+                <p style="color: #999;">Crea il tuo account per iniziare</p>
+            </div>
+
+            <form id="cliente-register-form">
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" placeholder="Mario" required minlength="2">
+                </div>
+
+                <div class="form-group">
+                    <label for="cognome">Cognome</label>
+                    <input type="text" id="cognome" placeholder="Rossi" required minlength="2">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="mario.rossi@email.com" autocomplete="username" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="********" required minlength="8"  autocomplete="new-password">
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">Conferma Password</label>
+                    <input type="password" id="confirm-password" placeholder="********" required minlength="8" autocomplete="new-password">
+                </div>
+
+                <button type="submit" class="btn">Registrati</button>
+            </form>
+            
+
+            <div class="link">
+                <a href="cliente-login.html" style="color: #00a86b; text-decoration: none;">Hai già un account? Accedi</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/cliente-registrazione.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distributore - NewisLPS</title>
+   <link rel="stylesheet" href="/css/common-styles.css">
+</head>
+<body>
+
+    <!-- Popup Modale Selezione Cliente  -->
+    <div id="modal-badge" class="modal-overlay">
+        <div class="modal-badge-content">
+            <div class="modal-badge-icon">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#00cc7f" stroke-width="2">
+                    <rect x="2" y="5" width="20" height="14" rx="2"/>
+                    <circle cx="12" cy="12" r="3"/>
+                    <line x1="2" y1="9" x2="22" y2="9"/>
+                </svg>
+            </div>
+            <h2 class="modal-badge-title">Avvicina il tuo Badge</h2>
+            <p class="modal-badge-subtitle">Seleziona il tuo account e inserisci la password per autenticarti</p>
+
+            <div class="modal-badge-field">
+                <label for="select-cliente">Cliente</label>
+                <select id="select-cliente">
+                    <option value="">Caricamento clienti...</option>
+                </select>
+            </div>
+
+            <div class="modal-badge-field">
+                <label for="input-password-badge">Password</label>
+                <input type="password" id="input-password-badge" placeholder="Inserisci la tua password">
+            </div>
+
+            <div class="modal-badge-actions">
+                <button id="btn-connetti-badge" class="btn-badge btn-badge-primary">Connetti</button>
+                <button id="btn-annulla-badge" class="btn-badge btn-badge-secondary">Annulla</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="header">
+            <div class="logo">
+                <div class="logo-text">NewisLPS</div>
+            </div>
+            <div class="machine-name">Edificio 9 - Piano Terra</div>
+            <div class="user-info">
+                <div class="user-name" id="user-name">Nessun cliente connesso</div>
+                <div class="credit" id="credit-display">€ 0.00</div>
+                <button id="btn-disconnetti-badge" style="margin-top: 10px; padding: 8px 16px; background: #dc3545; color: white; border: none; border-radius: 6px; font-size: 13px; cursor: pointer; display: none;">
+                    Disconnetti Badge
+                </button>
+            </div>
+        </div>
+
+        <!-- TAB -->
+        <div class="tabs">
+            <span class="tab active" data-tab="favourites">FAVOURITES</span>
+            <span class="tab" data-tab="coffee">COFFEE</span>
+            <span class="tab" data-tab="snacks">SNACKS</span>
+        </div>
+
+        <!-- PRODOTTI -->
+       <div class="products-grid">
+
+    <div class="product-card" data-type="coffee" data-name="Espresso" data-price="1.00">
+        <div class="info-icon">i</div>
+        <img src="/img/espresso.svg" alt="Espresso" class="product-image">
+        <div class="product-name">Espresso</div>
+        <div class="product-price">1.00 €</div>
+    </div>
+
+    <div class="product-card" data-type="coffee" data-name="Cappuccino" data-price="1.00">
+        <div class="info-icon">i</div>
+        <img src="/img/cappuccino.svg" alt="Cappuccino" class="product-image">
+        <div class="product-name">Cappuccino</div>
+        <div class="product-price">1.00 €</div>
+    </div>
+
+    <div class="product-card" data-type="coffee" data-name="Cappuccino Intense" data-price="1.00">
+        <div class="info-icon">i</div>
+        <img src="/img/cappuccino-intense.svg" alt="Cappuccino Intense" class="product-image">
+        <div class="product-name">Cappuccino Intense</div>
+        <div class="product-price">1.00 €</div>
+    </div>
+
+    <div class="product-card" data-type="coffee" data-name="Coffee Barley" data-price="1.00">
+        <div class="info-icon">i</div>
+        <img src="/img/barley.svg" alt="Coffee Barley" class="product-image">
+        <div class="product-name">Coffee Barley</div>
+        <div class="product-price">1.00 €</div>
+    </div>
+
+    <div class="product-card" data-type="coffee" data-name="Americano" data-price="1.00">
+        <div class="info-icon">i</div>
+        <img src="/img/americano.svg" alt="Americano" class="product-image">
+        <div class="product-name">Americano</div>
+        <div class="product-price">1.00 €</div>
+    </div>
+
+    <div class="product-card" data-type="snack" data-name="Biscotti" data-price="0.50">
+        <div class="info-icon">i</div>
+        <img src="/img/biscotti.svg" alt="Biscotti" class="product-image">
+        <div class="product-name">Biscotti</div>
+        <div class="product-price">0.50 €</div>
+    </div>
+
+</div>
+
+    <div class="sugar-selector">
+    <div class="sugar-title">Seleziona quantità di zucchero</div>
+    <div class="sugar-options">
+
+        <div class="sugar-btn" data-sugar="0">0</div>
+        <div class="sugar-btn" data-sugar="0.5">1/2</div>
+        <div class="sugar-btn" data-sugar="1">1</div>
+        <div class="sugar-btn" data-sugar="1.5">3/2</div>
+        <div class="sugar-btn" data-sugar="2">2</div>
+        <div class="sugar-btn" data-sugar="2.5">5/2</div>
+        <div class="sugar-btn" data-sugar="3">3</div>
+
+    </div>
+</div>
+
+<div class="page-actions">
+    <button id="eroga-btn" class="eroga-btn" type="button">
+        Eroga
+    </button>
+</div>
+
+
+    <script src="/js/distributore-main.js"></script>
+</body>
+</html>

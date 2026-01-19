@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addetti>
+    <addetto>
+        <nome>Marco</nome>
+        <cognome>Ferrara</cognome>
+        <username>mferrara</username>
+        <email>marco.ferrara@example.com</email>
+        <telefono>+39 333 1111111</telefono>
+        <zona>Edificio A</zona>
+        <stato>attivo</stato>
+        <interventi_mese>23</interventi_mese>
+        <ultimo_intervento>2025-11-01</ultimo_intervento>
+    </addetto>
+
+    <addetto>
+        <nome>Eleonora</nome>
+        <cognome>Prestigiacomo</cognome>
+        <username>eleopresti</username>
+        <email>eleonora.prestigiacomo@example.com</email>   
+        <telefono>+39 333 1212121</telefono>
+        <zona>Edificio A</zona>
+        <stato>attivo</stato>
+        <interventi_mese>27</interventi_mese>
+        <ultimo_intervento>2025-11-03</ultimo_intervento>
+    </addetto>
+
+    <addetto>
+        <nome>Giulia</nome>
+        <cognome>Conte</cognome>
+        <username>gconte</username>
+        <email>giulia.conte@example.com</email>
+        <telefono>+39 333 2222222</telefono>
+        <zona>Edificio B</zona>
+        <stato>attivo</stato>
+        <interventi_mese>18</interventi_mese>
+        <ultimo_intervento>2025-10-30</ultimo_intervento>
+    </addetto>
+
+    <addetto>
+        <nome>Francesco</nome>
+        <cognome>Marino</cognome>
+        <username>fmarino</username>
+        <email>francesco.marino@example.com</email>
+        <telefono>+39 333 3333333</telefono>
+        <zona>Tutte le zone</zona>
+        <stato>attivo</stato>
+        <interventi_mese>31</interventi_mese>
+        <ultimo_intervento>2025-11-02</ultimo_intervento>
+    </addetto>
+
+    <addetto>
+        <nome>Alessia</nome>
+        <cognome>Greco</cognome>
+        <username>agreco</username>
+        <email>alessia.greco@example.com</email>
+        <telefono>+39 333 4444444</telefono>
+        <zona>Edificio C</zona>
+        <stato>attivo</stato>
+        <interventi_mese>15</interventi_mese>
+        <ultimo_intervento>2025-10-28</ultimo_intervento>
+    </addetto>
+
+    <addetto>
+        <nome>Antonio</nome>
+        <cognome>Caruso</cognome>
+        <username>acaruso</username>
+        <email>antonio.caruso@example.com</email>
+        <telefono>+39 333 5555555</telefono>
+        <zona>Edificio D</zona>
+        <stato>disattivo</stato>
+        <interventi_mese>0</interventi_mese>
+        <ultimo_intervento>2025-09-30</ultimo_intervento>
+    </addetto>
+</addetti>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Cup body -->
+  <path d="M 60 80 L 50 150 Q 50 160 60 160 L 140 160 Q 150 160 150 150 L 140 80 Z"
+        fill="#C19A6B" stroke="#A0826D" stroke-width="2"/>
+
+  <!-- Barley coffee inside cup (lighter than regular coffee) -->
+  <ellipse cx="100" cy="80" rx="40" ry="8" fill="#B8956A"/>
+
+  <!-- Cup rim -->
+  <ellipse cx="100" cy="80" rx="40" ry="5" fill="#D4AF76" opacity="0.7"/>
+
+  <!-- Handle -->
+  <path d="M 150 90 Q 170 100 170 120 Q 170 140 150 150"
+        fill="none" stroke="#C19A6B" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- Saucer -->
+  <ellipse cx="100" cy="165" rx="55" ry="8" fill="#C19A6B" opacity="0.6"/>
+  <ellipse cx="100" cy="163" rx="55" ry="6" fill="#D4AF76" opacity="0.8"/>
+
+  <!-- Barley grains decoration on cup -->
+  <g opacity="0.3">
+    <ellipse cx="80" cy="110" rx="3" ry="6" fill="#8B7355" transform="rotate(-15 80 110)"/>
+    <ellipse cx="90" cy="105" rx="3" ry="6" fill="#8B7355" transform="rotate(10 90 105)"/>
+    <ellipse cx="110" cy="105" rx="3" ry="6" fill="#8B7355" transform="rotate(-10 110 105)"/>
+    <ellipse cx="120" cy="110" rx="3" ry="6" fill="#8B7355" transform="rotate(15 120 110)"/>
+  </g>
+
+  <!-- Steam -->
+  <path d="M 80 65 Q 75 50 80 40" fill="none" stroke="#C0C0C0" stroke-width="2" opacity="0.7" stroke-linecap="round"/>
+  <path d="M 100 60 Q 95 45 100 30" fill="none" stroke="#C0C0C0" stroke-width="2" opacity="0.6" stroke-linecap="round"/>
+  <path d="M 120 65 Q 125 50 120 40" fill="none" stroke="#C0C0C0" stroke-width="2" opacity="0.7" stroke-linecap="round"/>
+</svg>

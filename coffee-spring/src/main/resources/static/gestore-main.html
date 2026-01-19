@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Gestore - NewisLPS</title>
+    <link rel="stylesheet" href="/css/common-styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">
+                <div class="logo-text">NewisLPS</div>
+               
+                
+            </div>
+            <div class="machine-name">Dashboard Gestore</div>
+            <div class="user-info">
+                <div class="user-name" id="nome-gestore">Caricamento...</div>
+            </div>
+        </div>
+
+        <!-- Menu navigazione -->
+        <div class="tabs">
+            <a href="gestore-main.html" class="tab active" style="text-decoration: none;">STATO MACCHINE</a>
+            <a href="gestore-distributori.html" class="tab" style="text-decoration: none;">DISTRIBUTORI</a>
+            <a href="gestore-addetti.html" class="tab" style="text-decoration: none;">ADDETTI</a>
+        </div>
+
+        <!-- Statistiche generali -->
+       <div class="action-section">
+    <div class="action-title">Monitoraggio Distributori</div>
+
+    <div class="input-group" style="margin-bottom: 15px;">
+        <input type="text" id="filtro-id" placeholder="Filtra per ID (es. DIST003)">
+        <button class="btn" id="btn-filtra" style="width:auto; padding:10px 20px; margin:0;">
+            Cerca
+        </button>
+        <button class="btn btn-secondary" id="btn-reset" style="width:auto; padding:10px 20px; margin-left:10px;">
+            Mostra tutti
+        </button>
+    </div>
+
+    <p id="messaggio-ricerca" style="font-size:13px; color:#aaa; margin-bottom:10px;"></p>
+
+    <div id="machine-list" class="machine-list">
+        <!-- card generate da JS -->
+    </div>
+</div>
+
+        <!-- Logout -->
+        <a href="gestore-login.html" class="btn btn-secondary" style="margin-top: 20px; display: block; text-align: center; text-decoration: none;">Esci</a>
+    </div>
+
+    <!-- Script esterno -->
+<script src="/js/gestore-main.js"></script>
+
+</body>
+</html>

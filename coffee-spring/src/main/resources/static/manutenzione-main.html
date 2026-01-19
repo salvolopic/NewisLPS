@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Manutenzione - NewisLPS</title>
+    <link rel="stylesheet" href="/css/common-styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">
+                <div class="logo-text ">NewisLPS</div>
+            </div>
+            <div class="machine-name font-size">Area Manutenzione</div>
+            <div class="user-info">
+                <div class="user-name" id="nome-manutentore">Caricamento...</div>
+            </div>
+        </div>
+
+        <!-- Ricerca distributore -->
+        <div class="action-section">
+            <div class="action-title text-center ">Carica Stato Distributore</div>
+            <div class="input-group">
+                <input type="text" id="cercaId" placeholder="Inserisci ID distributore (es. UNIPA-ED9-PT)">
+                <button class="btn" id="btn-carica" style="width: auto; padding: 15px 32px; margin: 0;">Carica</button>
+            </div>
+        </div>
+
+        <!-- Stato distributore caricato dinamicamente -->
+        <div id="risultato" style="display:none; margin-top: 20px;"></div>
+
+        <!-- Logout -->
+        <a href="manutenzione-login.html" class="btn btn-secondary" style="margin-top: 20px; display: block; text-align: center; text-decoration: none;">Esci</a>
+    </div>
+
+    <script src="/js/manutenzione-main.js?v=4"></script>
+</body>
+</html>

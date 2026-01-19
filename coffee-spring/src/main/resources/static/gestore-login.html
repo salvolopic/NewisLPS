@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Gestore - NewisLPS</title>
+    <link rel="stylesheet" href="/css/common-styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-container">
+            <div class="login-header">
+                <div class="logo-text" style="color: #00a86b; font-size: 42px;">NewisLPS</div>
+                <h1>Accesso Gestore</h1>
+                <p style="color: #999;">Area riservata amministratori di sistema</p>
+            </div>
+
+             <form id="gestore-login-form">
+                <div class="form-group">
+                    <label for="username">Username Amministratore</label>
+                    <input type="text" id="username" placeholder="admin" required minlength="4">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="••••••••" required minlength="8">
+                </div>
+
+                <button type="submit" class="btn">Accedi</button>
+            </form>
+            
+        </div>
+    </div>
+    <script src = "/js/gestore-login.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Larger cup body for Americano -->
+  <path d="M 50 75 L 40 155 Q 40 168 52 168 L 148 168 Q 160 168 160 155 L 150 75 Z"
+        fill="#A0522D" stroke="#8B4513" stroke-width="2"/>
+
+  <!-- Coffee inside cup (lighter brown for diluted coffee) -->
+  <ellipse cx="100" cy="75" rx="50" ry="10" fill="#6F4E37" opacity="0.85"/>
+
+  <!-- Coffee surface with slight gradient effect -->
+  <ellipse cx="100" cy="73" rx="50" ry="8" fill="#8B6F47" opacity="0.6"/>
+
+  <!-- Cup rim -->
+  <ellipse cx="100" cy="75" rx="50" ry="6" fill="#C19A6B" opacity="0.7"/>
+
+  <!-- Handle -->
+  <path d="M 160 85 Q 182 95 182 120 Q 182 145 160 155"
+        fill="none" stroke="#A0522D" stroke-width="9" stroke-linecap="round"/>
+
+  <!-- Saucer (larger) -->
+  <ellipse cx="100" cy="173" rx="65" ry="9" fill="#A0522D" opacity="0.6"/>
+  <ellipse cx="100" cy="171" rx="65" ry="7" fill="#C19A6B" opacity="0.8"/>
+
+  <!-- Steam (more steam for hot Americano) -->
+  <path d="M 70 60 Q 65 45 70 30" fill="none" stroke="#D0D0D0" stroke-width="2" opacity="0.7" stroke-linecap="round"/>
+  <path d="M 90 55 Q 85 38 90 22" fill="none" stroke="#D0D0D0" stroke-width="2" opacity="0.6" stroke-linecap="round"/>
+  <path d="M 110 55 Q 105 38 110 22" fill="none" stroke="#D0D0D0" stroke-width="2" opacity="0.6" stroke-linecap="round"/>
+  <path d="M 130 60 Q 135 45 130 30" fill="none" stroke="#D0D0D0" stroke-width="2" opacity="0.7" stroke-linecap="round"/>
+</svg>

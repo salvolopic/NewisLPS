@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Cliente - NewisLPS</title>
+    <link rel="stylesheet" href="/css/common-styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <div class="logo-text">NewisLPS</div>
+            </div>
+            <div class="machine-name">Area Cliente</div>
+            <div class="user-info">
+                <div class="user-name">Caricamento...</div>
+                <div class="credit">€ 0.00</div>
+            </div>
+        </div>
+
+        <div class="action-section">
+            <div class="action-title">Stato Connessione</div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                <div>
+                    <div style="font-size: 14px; color: #999; margin-bottom: 5px;">Distributore</div>
+                    <div class="disconnected-badge">Non connesso</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="action-section">
+            <div class="action-title">Connetti a Distributore</div>
+            <div class="input-group">
+                <input type="text" id="idDist" placeholder="Inserisci ID distributore (es. UNIPA-ED9-PT)">
+                <button class="btn" id="btn-connetti" style="width: auto; padding: 12px 30px; margin: 0;">Connetti</button>
+            </div>
+            <p style="font-size: 12px; color: #999; margin-top: 10px;">
+                Inserisci l'ID del distributore visualizzato sullo schermo
+            </p>
+        </div>
+
+        <div class="action-section">
+            <div class="action-title">Disconnetti Distributore</div>
+            <p style="font-size: 14px; color: #999; margin-bottom: 15px;">
+                Una volta connesso, potrai disconnetterti dal distributore
+            </p>
+            <button class="btn btn-danger" id="btn-disconnetti">Disconnetti</button>
+        </div>
+
+        <div class="action-section">
+            <div class="action-title">Ricarica Credito</div>
+            <div class="form-group" style="margin-bottom: 15px;">
+                <label>Importo da ricaricare</label>
+                <select id="importo" style="width: 100%; padding: 12px; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 8px; color: #ffffff;">
+                    <option value="5">€ 5.00</option>
+                    <option value="10">€ 10.00</option>
+                    <option value="20">€ 20.00</option>
+                    <option value="50">€ 50.00</option>
+                </select>
+            </div>
+            <button class="btn" id="btn-ricarica">Ricarica</button>
+        </div>
+
+        <div class="action-section">
+            <div class="action-title">Ultime Transazioni</div>
+
+            <div style="background: rgba(255, 255, 255, 0.05); padding: 15px; border-radius: 10px; margin-bottom: 10px;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <div style="font-size: 14px; font-weight: 600;">Cappuccino</div>
+                        <div style="font-size: 12px; color: #999;">UNIPA-ED9-PT - Edificio 9 Piano Terra</div>
+                        <div style="font-size: 12px; color: #999;">01/11/2025 14:35</div>
+                    </div>
+                    <div style="font-size: 16px; font-weight: 600; color: #ff6b7a;">- € 1.00</div>
+                </div>
+            </div>
+
+            <div style="background: rgba(255, 255, 255, 0.05); padding: 15px; border-radius: 10px; margin-bottom: 10px;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <div style="font-size: 14px; font-weight: 600;">Ricarica</div>
+                        <div style="font-size: 12px; color: #999;">Online</div>
+                        <div style="font-size: 12px; color: #999;">01/11/2025 10:20</div>
+                    </div>
+                    <div style="font-size: 16px; font-weight: 600; color: #00cc7f;">+ € 10.00</div>
+                </div>
+            </div>
+
+            <div style="background: rgba(255, 255, 255, 0.05); padding: 15px; border-radius: 10px;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <div style="font-size: 14px; font-weight: 600;">Espresso</div>
+                        <div style="font-size: 12px; color: #999;">UNIPA-ED8-P1 - Edificio 8 Piano 1</div>
+                        <div style="font-size: 12px; color: #999;">31/10/2025 16:45</div>
+                    </div>
+                    <div style="font-size: 16px; font-weight: 600; color: #ff6b7a;">- € 1.00</div>
+                </div>
+            </div>
+        </div>
+
+        <a href="cliente-login.html" class="btn btn-secondary" style="margin-top: 20px; display: block; text-align: center; text-decoration: none;">Esci</a>
+
+        <button class="assist-fixed" type="button" aria-label="Assistenza">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M21 6.5C21 4.57 19.43 3 17.5 3h-11C4.57 3 3 4.57 3 6.5v7C3 15.43 4.57 17 6.5 17H8v3l3.5-3H17.5C19.43 17 21 15.43 21 13.5v-7z" fill="#fff"/>
+            </svg>
+        </button>
+    </div>
+    <script src="/js/cliente-main.js"></script>
+</body>
+</html>
